@@ -1,25 +1,59 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { useState } from 'react';
+import Resume from './components/resumeinput';
+import Resumeoutput from './components/resumeoutput';
+import Front from './components/resumeinitial';
+import Register from './components/resumeregister';
+import Rlogin from './components/resumelogin';
+import Tophead from "./components/tophead";
+import Home from "./components/home";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+  
+
+const router = createBrowserRouter([
+{
+  path:"/",
+  element: <Front/>
+},
+{
+  path:"/register",
+  element: <Register/>
+},
+{
+  path:"/login",
+  element: <Rlogin/>
+},
+
+{
+  path:"/home",
+  element: <Home/>
+
 }
 
+
+])
+
+
+
+// const [resumedata, setResumedata]= useState(data);
+
+
+  return (
+    <div>
+{/* <Home resumedata = {resumedata} setResumedata={setResumedata}/> */}
+<RouterProvider router={router}/>
+</div>
+
+
+    );
+
+  }
+  
+
+
 export default App;
+

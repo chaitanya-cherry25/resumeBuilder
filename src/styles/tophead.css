@@ -1,0 +1,18 @@
+.head{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   /* border: 5px solid; */
+   height: 10rem;
+   
+}
+.flogout{
+    height: 5rem;
+    width: 12rem;
+    color: black;
+    font-size: 2rem;
+    font-weight: bolder;
+    background-color: #ff5e44;
+    border-radius: 10px;
+    cursor: pointer;
+}
